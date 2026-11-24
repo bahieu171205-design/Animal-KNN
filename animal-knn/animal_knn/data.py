@@ -78,7 +78,7 @@ def download_ranged(root=ROOT):
         if path.exists() and path.stat().st_size == size:
             return path
         start, end = i * size, (i + 1) * size - 1
-        subprocess.run(["curl.exe", "--fail", "--silent", "--show-error", "--location", "--max-time", "180",
+        subprocess.run(["curl", "--fail", "--silent", "--show-error", "--location", "--max-time", "180",
                         "--range", f"{start}-{end}", URL, "--output", str(path)], check=True)
         if path.stat().st_size != size:
             raise ValueError(f"Unexpected range length {i}")

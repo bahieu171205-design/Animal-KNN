@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chạy app Animal K-NN",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "animal_knn.desktop",
+      "cwd": "${workspaceFolder}/animal-knn",
+      "python": "${workspaceFolder}/animal-knn/.venv/bin/python"
+    }
+  ]
+}
